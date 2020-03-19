@@ -5,18 +5,20 @@
     .topbar__inner
         a.locationSelector.topbar__item(href="#locationModal" data-toggle="modal" data-target="#locationModal")
             span Ваш регион доставки:  г. Владикавказ
-        #locationModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='locationModalLabel', aria-hidden='true')
+        #locationModal.modal.location.fade(tabindex='-1', role='dialog', aria-labelledby='locationModalLabel', aria-hidden='true')
             .modal-dialog(role='document')
-                .modal-content
-                    .modal-header
-                        h5#locationModalLabel.modal-title ВАШ РЕГИОН ДОСТАВКИ
-                    .modal-body
-                        input(placeholder='Введите название населённого пункта')
-                        a(href="#") Определить автоматически
-                        div Популярные города
-                        ul
+                .modal-content.location__content
+                    .location__header
+                        h5#locationModalLabel.location__title ВАШ РЕГИОН ДОСТАВКИ
+                    .location__body
+                        input.input-text.input-text-bg(placeholder='Введите название населённого пункта')
+                        .location__auto
+                            a.link.link-primary(href="#") Определить автоматически
+                        div.location__subtitle Популярные города
+                        ul.location__list
                             each item in cities
-                                li #{item}
-                    .modal-footer
-                        button.btn.btn-secondary(type='button', data-dismiss='modal') Отмена
-                        button.btn.btn-primary(type='button') Запомнить выбор
+                                li.location__item
+                                    a(href='#') #{item}
+                    .modal-footer.location__footer
+                        button.btn.btn-link.btn-lg.location__action(type='button', data-dismiss='modal') Отмена
+                        button.btn.btn-primary.btn-lg.location__action(type='button') Запомнить выбор
