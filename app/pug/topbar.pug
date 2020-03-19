@@ -1,0 +1,22 @@
+-var cities = ['Москва','Санкт-Петербург','Екатеринбург','Новосибирск','Ростов-на-Дону']
+
+
+.topbar
+    .topbar__inner
+        a.locationSelector.topbar__item(href="#locationModal" data-toggle="modal" data-target="#locationModal")
+            span Ваш регион доставки:  г. Владикавказ
+        #locationModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='locationModalLabel', aria-hidden='true')
+            .modal-dialog(role='document')
+                .modal-content
+                    .modal-header
+                        h5#locationModalLabel.modal-title ВАШ РЕГИОН ДОСТАВКИ
+                    .modal-body
+                        input(placeholder='Введите название населённого пункта')
+                        a(href="#") Определить автоматически
+                        div Популярные города
+                        ul
+                            each item in cities
+                                li #{item}
+                    .modal-footer
+                        button.btn.btn-secondary(type='button', data-dismiss='modal') Отмена
+                        button.btn.btn-primary(type='button') Запомнить выбор

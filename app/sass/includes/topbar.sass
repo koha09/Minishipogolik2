@@ -1,0 +1,22 @@
+@import "../_vars.sass" 
+.topbar
+    background-color: $topbar-backColor
+    &__inner
+        display: flex
+    &__item
+        padding: 14px 0
+        text-decoration: none
+        color: $topbar-textColor
+        display: block
+        transition: color .2s ease-in-out
+        &:hover
+            text-decoration: none
+            color: $topbar-textHover
+        &:visited
+            color: $topbar-textColor
+            text-decoration: none
+        &:focus
+            outline: none
+            color: $topbar-textColor
+            text-decoration: none
+        
