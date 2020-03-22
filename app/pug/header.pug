@@ -48,21 +48,46 @@
                     .dropdown__inner 
                         .cart__title Ваша тележка пуста
                         a.cart__action Каталог товаров
+                .help.dropdown
+                    .help__icon
+                    .dropdown__inner 
+                        ul.help__list
+                            li.help__item
+                                a.help__link(href="#1") Доставка
+                            li.help__item
+                                a.help__link(href="#2") Размеры
+                            li.help__item
+                                a.help__link(href="#3") Возврат
+                            li.help__item
+                                a.help__link(href="#4") Гарантия
+                            li.help__item
+                                a.help__link(href="#5") Оплата
 
 
-    .menu
-        .menu-mobile
-            .menu-mobile__primary-row
-                span.fa.fa-bars
-                a.menu__logo(href="#menu")
+    .menu.mh-head.Sticky
+        .menu-mobile.searchbar-container
+            .menu-mobile__row
+                a.menu-mobile__action(href="#menu")
+                    span.menu-mobile__icon.menu-mobile__menu
+                span.menu-mobile__action.searchbar-toggle(data-target='#msearch')
+                    span.menu-mobile__icon.menu-mobile__search
+                a.menu__logo(href="/")
                     img(src='/img/logo.jpg',alt='logo')
-            .menu-mobile__secondary-row
+                a.menu-mobile__action
+                    span.menu-mobile__favorite.menu-mobile__icon
+                a.menu-mobile__action
+                    span.menu-mobile__cart.menu-mobile__icon
+                .searchbar#msearch(style="display: none")
+                    input.searchbar__input(placeholder="Поиск")
+                    button.searchbar__button
+                        i.menu-mobile__search-inverse.menu-mobile__icon
+            .__hidden(style='display:none')
+                include ./includes/_mobile-menu.pug
+
         .container.menu-desktop
             .menu__inner
-                a.menu__logo(href="#")
+                a.menu__logo(href="/")
                     img(src='/img/logo.jpg',alt='logo')
-
-                
                     ul.menu__list
                         li.menu__item.dropdown
                             a.menu__link(href="#")
@@ -155,10 +180,10 @@
                                     span Аутлет
 
 
-
-
+    span.scrollup(style='display: none')#scrollup
+        i.fa.fa-angle-double-up
                                 
-                            //- div.menu__submenu.dropdown__inner
+                            //- div.menu__submenu.dropdown__inner 
                             //-     .row
                             //-         .col-md-3
                             //-             .menu__title By Product

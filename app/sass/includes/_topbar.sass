@@ -53,7 +53,7 @@
     &__item
         margin: 7px 0
     &Selector > *:not(:first-child)
-        margin-left: 5px
+        margin-left: 8px
 
     &__footer
         padding: 16px 0
@@ -135,24 +135,24 @@
         padding: 14px 20px 0
     &__action
         font-size: 12px
-        border: 1px solid white
         display: block
-        color: white
         margin: 10px 20px
         text-align: center
         padding: 10px 0
         font-size: 11px
         text-transform: uppercase
+        color: #efefef
+        border: 1px solid #efefef
         &:hover
             text-decoration: none
-            color: $topbar-textHover
-            border-color: $topbar-textHover
+            color: white
+            border-color: white
         &:visited
-            color: $topbar-textColor
+            color: white
             text-decoration: none
         &:focus
             outline: none
-            color: $topbar-textColor
+            color: white
             text-decoration: none
 .favorite
     display: flex
@@ -170,26 +170,59 @@
         padding: 14px 20px 0
     &__action
         font-size: 12px
-        border: 1px solid white
         display: block
-        color: white
         margin: 10px 20px
         text-align: center
         padding: 10px 0
         font-size: 11px
         text-transform: uppercase
+        color: #efefef
+        border: 1px solid #efefef
         &:hover
             text-decoration: none
-            color: $topbar-textHover
-            border-color: $topbar-textHover
+            color: white
+            border-color: white
         &:visited
-            color: $topbar-textColor
+            color: white
             text-decoration: none
         &:focus
             outline: none
-            color: $topbar-textColor
+            color: white
             text-decoration: none
+.help
+    display: flex
+    align-items: center
+    display: flex
+    cursor: pointer
+    &__icon
+        background: url('/img/icons/help.png')
+        color: white
+        width: 28px
+        height: 28px
+        background-size: contain
+    &__title
+        font-size: 16px
+        color: white
+        padding: 14px 20px 0
         
+    &__list
+        margin: 8px 16px
+        list-style: none
+        
+    &__link
+        font-size: 12px
+        display: block
+        color: white
+        padding: 4px 0
+        font-size: 11px
+        text-transform: uppercase
+        &:hover
+            text-decoration: none
+            color: #ccc
+            border-color: #ccc
+        &:visited
+            color: #ccc
+            text-decoration: none
 
 
 @media screen and ( max-width: 767px  )

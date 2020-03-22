@@ -123,7 +123,7 @@ gulp.task('watch', function() {
     gulp.watch('app/sass/**/*.sass', gulp.parallel('sass'));
     gulp.watch(['libs/**/*.js', 'app/js/common.js'], gulp.parallel('js'));
     gulp.watch('app/*.html', gulp.parallel('code'));
-    gulp.watch('app/pug/*.pug', gulp.parallel('pug'));
+    gulp.watch(['app/pug/*.pug', 'app/pug/**/*.pug'], gulp.parallel('pug'));
 });
 
 gulp.task('default', gulp.parallel('sass', 'js', 'browser-sync', 'watch'));
