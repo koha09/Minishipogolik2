@@ -1,5 +1,38 @@
 extends ./_layout.pug
 block content
-    .row
+    section.row
         .col-md-12
-            
+            a.block-fullscreen(href="#")
+                img.block-fullscreen__image(src="img/section1.jpg")
+                .block-fullscreen__inner
+                    h3.block-fullscreen__subtitle You may like this brand
+                    h2.block-fullscreen__title Balmain
+                    .block-fullscreen__action Shop the collection
+    section.container-fluid
+        .row
+            .col-md-3.nopadding
+                a.block-col(href="#")
+                    img.block-col__image(src="img/section2-1.jpg")
+                    .block-col__inner
+                        h3.block-col__subtitle Каталог
+                        h2.block-col__title Детям
+                        
+            .col-md-3.nopadding
+                a.block-col(href="#")
+                    img.block-col__image(src="img/section2-2.jpg")
+                    .block-col__inner
+                        h3.block-col__subtitle Каталог
+                        h2.block-col__title Мужчинам
+            .col-md-3.nopadding
+                a.block-col(href="#")
+                    img.block-col__image(src="img/section2-3.jpg")
+                    .block-col__inner
+                        h3.block-col__subtitle Каталог
+                        h2.block-col__title Женщинам
+            .col-md-3.nopadding
+                a.block-col(href="#")
+                    img.block-col__image(src="img/section2-4.jpg")
+                    .block-col__inner
+                        h3.block-col__subtitle Каталог
+                        h2.block-col__title О нас
+                    

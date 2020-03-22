@@ -52,7 +52,8 @@
         margin-bottom: 32px
     &__item
         margin: 7px 0
-    
+    &Selector > *:not(:first-child)
+        margin-left: 5px
 
     &__footer
         padding: 16px 0
@@ -123,10 +124,11 @@
     display: flex
     cursor: pointer
     &__icon
-        background: url('/img/icons/cart.svg')
+        background: url('/img/icons/cart.png')
         color: white
         width: 28px
         height: 28px
+        background-size: cover
     &__title
         font-size: 16px
         color: white

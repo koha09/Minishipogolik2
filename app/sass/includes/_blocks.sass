@@ -1,0 +1,108 @@
+.block
+    // Начало
+    &-fullscreen            
+        position: relative
+        display: block
+        color: black
+        &:hover
+            text-decoration: none
+            color: #333
+        &:visited
+            color: black
+            text-decoration: none
+        &:focus
+            outline: none
+            color: black
+            text-decoration: none
+
+
+        &__image
+            width: 100%
+            object-fit: cover
+        &__inner
+            position: absolute
+            height: 100%
+            width: 100%
+            bottom: 0
+            top: 0
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+        &__subtitle
+            font-size: 2.2em
+            text-transform: uppercase
+        &__title
+            font-size: 4.6em
+            font-weight: 600    
+            font-family: serif
+        &__action
+            font-size: 1em
+            background: #333
+            border: 1px solid #333
+            color: white
+            padding: .7em .6em
+            width: 20em
+            margin-top: 1em
+            text-transform: uppercase
+            font-weight: bold
+            letter-spacing: .16em 
+            text-align: center
+            transition-property: color background
+            transition-timing-function: linear
+            transition-duration: .2s
+            &:hover
+                background: white
+                color: #333
+    @media screen and ( max-width: 767px )
+        &-fullscreen__image
+            min-height: 60vh
+    // Конец
+    // Начало
+    &-col
+        width: 100%
+        position: relative
+        display: block
+        color: white
+        *
+            transition: color .1s linear
+        &:hover *
+            text-decoration: none
+            color: #bb9a37
+        &:visited
+            color: white
+            text-decoration: none
+        &:focus
+            outline: none
+            color: white
+            text-decoration: none
+
+
+        &__image
+            width: 100%
+            object-fit: cover
+        &__inner
+            position: absolute
+            height: 100%
+            width: 100%
+            bottom: 0
+            top: 0
+            display: flex
+            flex-direction: column
+            justify-content: flex-end
+            align-items: center
+            padding-bottom: .2em
+        &__subtitle
+            font-size: 1.6em
+            text-transform: uppercase
+            font-weight: 400
+
+        &__title
+            text-transform: uppercase
+            font-size: 2.8em
+            line-height: 100%
+            font-family: serif
+            font-weight: 600
+.nopadding
+   padding: 0
+   margin: 0
