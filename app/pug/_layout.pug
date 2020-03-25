@@ -25,13 +25,22 @@ html(lang='ru')
 		link(rel='stylesheet', href='css/font-awesome.min.css')
 		link(rel='stylesheet', href='css/mmenu.css')
 		link(rel='stylesheet', href='css/main.min.css')
+		link(rel="stylesheet", href="css/owl/owl.carousel.min.css")
+		link(rel="stylesheet", href="css/owl/owl.theme.default.min.css")
 	body
 		.wrapper#wrapper
 			include ./header.pug
 			block content
+			include ./footer.pug
 		
 		script(src='js/scripts.min.js')
 		//- script(src='js/util.js')
 		script(src='js/bootstrap.bundle.min.js')
 		script(src='js/mmenu/mmenu.polyfills.js')
 		script(src='js/mmenu/mmenu.js')
+		script(src="js/owl/owl.carousel.min.js")
+		script.
+			$(document).ready(function(){
+				$("#fbanner").owlCarousel();
+			});
+		
