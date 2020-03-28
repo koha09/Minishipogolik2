@@ -10,14 +10,22 @@ block content
                 li.submenu__item
                     a.submenu__link(href="#") Бренды
 
-    section.container-fluid#section-banner
-        .row
-            a.block-fullscreen(href="#")
-                img.block-fullscreen__image(src="img/section1.jpg")
-                .block-fullscreen__inner
-                    h3.block-fullscreen__subtitle You may like this brand
-                    h2.block-fullscreen__title Balmain
-                    .block-fullscreen__action Shop the collection
+    section.container-fluid#section-banner.nopadding
+        #mbanner.owl-carousel.owl-theme
+            .row
+                a.block-fullscreen(href="#")
+                    img.block-fullscreen__image(src="img/section1.jpg")
+                    .block-fullscreen__inner
+                        h3.block-fullscreen__subtitle You may like this brand
+                        h2.block-fullscreen__title Balmain
+                        .block-fullscreen__action Shop the collection
+            .row
+                a.block-fullscreen(href="#")
+                    img.block-fullscreen__image(src="img/section1.jpg")
+                    .block-fullscreen__inner
+                        h3.block-fullscreen__subtitle You may like this brand
+                        h2.block-fullscreen__title Balmain
+                        .block-fullscreen__action Shop the collection
     section.container-fluid
         .row
             .col-md-3.col-sm-3.col-xs-6.nopadding
