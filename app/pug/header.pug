@@ -1,7 +1,7 @@
 -var cities = ['Москва','Санкт-Петербург','Екатеринбург','Новосибирск','Ростов-на-Дону']
 
 -var isAuthorizated = true
--var isCartEmpty = false
+-var isCartEmpty = true
 
 .header
     .topbar
@@ -70,8 +70,8 @@
                     .cart__icon
                     .cart__content.dropdown__inner 
                         if(isCartEmpty)
-                            .cart__title Ваша тележка пуста
-                            a.cart__action Каталог товаров
+                            .cart__title В вашей корзине пока нет товаров
+                            a.cart__action Перейти в каталог
                         else
                             table
                                 tbody
