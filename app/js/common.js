@@ -5,7 +5,20 @@ $(function() {
         $(this).addClass('top-item-opened');
         return false;
     });
+    // Социальные сети
+    $('#social-toggle').click(function() {
+        const parent = $(this).parent();
+        const el = parent.find('.social-bar-links');
 
+        if (el.is(':visible')) {
+            parent.removeClass('social-bar--opened');
+            $('.help').fadeIn();
+        } else {
+            parent.addClass('social-bar--opened');
+            $('.help').fadeOut();
+        }
+        el.toggle('slide');
+    })
 
     // Sticky menu
     window.onscroll = function() { onScrollListener() };
@@ -150,7 +163,7 @@ $(function() {
     })
 
     $('.banner-topbar__close').click(function() {
-        $(this).parent().hide();
+        $(this).parent().slideUp();
     })
 
     // Mobile menu
