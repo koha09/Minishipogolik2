@@ -9,16 +9,41 @@ $(function() {
     $('#social-toggle').click(function() {
         const parent = $(this).parent();
         const el = parent.find('.social-bar-links');
+        const contacts = parent.find('.social-bar-contact');
 
         if (el.is(':visible')) {
             parent.removeClass('social-bar--opened');
-            $('.help').fadeIn();
+            $('.help, .order-status').fadeIn();
         } else {
             parent.addClass('social-bar--opened');
-            $('.help').fadeOut();
+            $('.help, .order-status').fadeOut();
         }
         el.toggle('slide');
-    })
+        contacts.toggle('slide', function() {
+
+        });
+    });
+    // Выпадающие меню
+    $('.toolbar-dropdown')
+        .on('mouseout', function() {
+            $(this).removeClass('toolbar-dropdown--opened');
+        }).on('mouseover', function() {
+            $(this).addClass('toolbar-dropdown--opened');
+        });
+
+    // Кнопки корзины
+    $('.prev').click(function() {
+        const input_count = $(this).parent().find('.count');
+        const c = parseInt(input_count.val());
+        if (c != 1) {
+            input_count.val(c - 1);
+        }
+    });
+    $('.next').click(function() {
+        const input_count = $(this).parent().find('.count');
+        const c = parseInt(input_count.val());
+        input_count.val(c + 1);
+    });
 
     // Sticky menu
     window.onscroll = function() { onScrollListener() };
@@ -159,7 +184,7 @@ $(function() {
     $("#mbanner").owlCarousel({
         items: 1,
         margin: 20,
-        dots: false
+        dots: true,
     })
 
     $('.banner-topbar__close').click(function() {
