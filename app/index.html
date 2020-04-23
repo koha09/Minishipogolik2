@@ -31,42 +31,19 @@
           <div class="banner-topbar__close"></div>
         </div>
         <div class="topbar">
-          <div class="topbar__inner" id="topbar__search" style="display: none">
-            <div class="searchbar">
-              <button class="searchbar__button searchbar__button-search"></button>
-              <input class="searchbar__input" type="text" placeholder="Поиск" id="search-input">
-              <button class="searchbar__button-clear searchbar__button" id="searchbar__back"></button>
-            </div>
-          </div>
           <div class="topbar__inner" id="topbar__default">
-            <div class="topbar__left"><a class="locationSelector topbar__item" href="#locationModal" data-toggle="modal" data-target="#locationModal"><span class="fa fa-location-arrow"></span><span>Москва</span></a>
-              <div class="modal location fade" id="locationModal" tabindex="-1" role="dialog" aria-labelledby="locationModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content location__content">
-                    <div class="location__header">
-                      <h5 class="location__title" id="locationModalLabel">ВАШ РЕГИОН ДОСТАВКИ</h5>
-                    </div>
-                    <div class="location__body">
-                      <input class="input-text input-text-bg" placeholder="Введите название населённого пункта">
-                      <div class="location__auto"><a class="link link-primary" href="#">Определить автоматически</a></div>
-                      <div class="location__subtitle">Популярные города</div>
-                      <ul class="location__list">
-                        <li class="location__item"><a href="#">Москва</a></li>
-                        <li class="location__item"><a href="#">Санкт-Петербург</a></li>
-                        <li class="location__item"><a href="#">Екатеринбург</a></li>
-                        <li class="location__item"><a href="#">Новосибирск</a></li>
-                        <li class="location__item"><a href="#">Ростов-на-Дону</a></li>
-                      </ul>
-                    </div>
-                    <div class="modal-footer location__footer">
-                      <button class="btn btn-link btn-lg location__action" type="button" data-dismiss="modal">Отмена</button>
-                      <button class="btn btn-primary btn-lg location__action" type="button">Запомнить выбор</button>
-                    </div>
+            <div class="topbar__location"><a class="locationSelector topbar__item" href="#locationModal" data-toggle="modal" data-target="#locationModal"><span class="fa fa-location-arrow"></span><span>Москва</span></a></div>
+            <div class="topbar__delivery"> 
+              <div class="delivery">
+                <div class="back"><span>Скидка 5% при онлайн-оплате</span></div>
+                <div class="front">
+                  <div class="inner">
+                    <div class="content"><span>Доставка в ваш город&nbsp;&nbsp;</span><a href="#">1-2 дня</a><span class="delivery__icon"></span></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="topbar__right">
+            <div class="topbar__tools">
               <!-- Статус заказа--><span class="order-status">Статус заказа</span>
               <!-- Помощь-->
               <div class="help dropdown">
@@ -375,10 +352,10 @@
                         </div>
                         <!-- Третий блок-->
                         <div class="col-md-2"><strong class="text-center">Тренды сезона</strong><a href="#">
-                            <figure><img src="/img/gods/item1.png">
+                            <figure><img src="/img/goods/item1.png">
                               <figcaption>Сумка-рюкзак Unircorn</figcaption>
                             </figure></a><a href="#">
-                            <figure><img src="/img/gods/item2.png">
+                            <figure><img src="/img/goods/item2.png">
                               <figcaption>Сапожки Zaxy Bow</figcaption>
                             </figure></a></div>
                         <!-- Четвертый блок-->
@@ -406,9 +383,10 @@
             <!-- Logo--><a class="logo" href="/"><img src="/img/logo.png" alt="logo"></a>
             <!-- Panel tools    -->
             <div class="toolbar">
-              <div class="searchbar">
-                <input type="text" placeholder="Что будем искать?"><span class="searchbar__action"></span>
-              </div>
+              <form class="searchbar">
+                <input type="text" placeholder="Что будем искать?">
+                <button class="searchbar__action" type="submit"></button>
+              </form>
               <!-- Личный кабинет--><a class="profile" href="#"><img src="img/user-default.png"></a>
               <!-- Избранные-->
               <div class="toolbar-dropdown dropdown">
@@ -424,42 +402,42 @@
                   <table>
                     <tbody>
                       <tr>
-                        <td class="text-center"><a href="#"><img class="img-thumbnail" src="/img/gods/item1.png" alt="Apple Cinema 30&quot;" title="Apple Cinema 30&quot;"></a></td>
-                        <td class="text-left"><a href="http://194.67.91.97/index.php?route=product/product&amp;product_id=42">Mini Melisa MAR SANDAL SWEET DREAMS</a>
+                        <td class="text-center"><a href="#"><img class="img-thumbnail" src="/img/goods/item1.png" alt="Apple Cinema 30&quot;" title="Apple Cinema 30&quot;"></a></td>
+                        <td class="text-left"><a class="cart-name" href="http://194.67.91.97/index.php?route=product/product&amp;product_id=42">Mini Melisa MAR SANDAL SWEET DREAMS</a>
                           <div class="properties"><small>Размер: 28/29</small><small>Цвет: Розовый</small></div>
                         </td>
                         <td>
                           <div class="counter-container"><span class="prev fa fa-caret-left"></span>
-                            <input class="count" type="number" start="1" step="1" value="1"><span class="next fa fa-caret-right"></span>
+                            <input class="count" type="number" start="1" step="1" value="2"><span class="next fa fa-caret-right"></span>
                           </div>
                         </td>
                         <td class="price">228 Р</td>
                         <td class="text-center"><span class="remove fa fa-trash"></span></td>
                       </tr>
                       <tr>
-                        <td class="text-center"><a href="#"><img class="img-thumbnail" src="/img/gods/item1.png" alt="Apple Cinema 30&quot;" title="Apple Cinema 30&quot;"></a></td>
-                        <td class="text-left"><a href="http://194.67.91.97/index.php?route=product/product&amp;product_id=42">Mini Melisa MAR SANDAL SWEET DREAMS</a>
+                        <td class="text-center"><a href="#"><img class="img-thumbnail" src="/img/goods/item1.png" alt="Apple Cinema 30&quot;" title="Apple Cinema 30&quot;"></a></td>
+                        <td class="text-left"><a class="cart-name" href="http://194.67.91.97/index.php?route=product/product&amp;product_id=42">Mini Melisa MAR SANDAL SWEET DREAMS</a>
                           <div class="properties"><small>Размер: 28/29</small><small>Цвет: Розовый</small></div>
                         </td>
                         <td>
                           <div class="counter-container"><span class="prev fa fa-caret-left"></span>
-                            <input class="count" type="number" start="1" step="1" value="1"><span class="next fa fa-caret-right"></span>
+                            <input class="count" type="number" start="1" step="1" value="3"><span class="next fa fa-caret-right"></span>
                           </div>
                         </td>
                         <td class="price">228 Р</td>
                         <td class="text-center"><span class="remove fa fa-trash"></span></td>
                       </tr>
                       <tr>
-                        <td class="text-center"><a href="#"><img class="img-thumbnail" src="/img/gods/item1.png" alt="Apple Cinema 30&quot;" title="Apple Cinema 30&quot;"></a></td>
-                        <td class="text-left"><a href="http://194.67.91.97/index.php?route=product/product&amp;product_id=42">Mini Melisa MAR SANDAL SWEET DREAMS</a>
+                        <td class="text-center"><a href="#"><img class="img-thumbnail" src="/img/goods/item1.png" alt="Apple Cinema 30&quot;" title="Apple Cinema 30&quot;"></a></td>
+                        <td class="text-left"><a class="cart-name" href="http://194.67.91.97/index.php?route=product/product&amp;product_id=42">Mini Melisa MAR SANDAL SWEET DREAMS</a>
                           <div class="properties"><small>Размер: 28/29</small><small>Цвет: Розовый</small></div>
                         </td>
                         <td>
                           <div class="counter-container"><span class="prev fa fa-caret-left"></span>
-                            <input class="count" type="number" start="1" step="1" value="1"><span class="next fa fa-caret-right"></span>
+                            <input class="count" type="number" start="1" step="1" value="4"><span class="next fa fa-caret-right"></span>
                           </div>
                         </td>
-                        <td style="width:200px"><span class="stock"><span class="stock-price-new">1000 Р</span><span class="stock-price-old">800 Р</span></span></td>
+                        <td><span class="stock"><span class="stock-price-new">1000 Р</span><span class="stock-price-old">800 Р</span></span></td>
                         <td class="text-center"><span class="remove fa fa-trash"></span></td>
                       </tr>
                     </tbody>
@@ -469,7 +447,7 @@
                   <table>
                     <tbody>
                       <tr>
-                        <td><a class="toolbar-dropdown__action" href="#">Оформить заказ</a></td>
+                        <td><a class="toolbar-dropdown__action btn btn-primary" href="#">Оформить заказ</a></td>
                         <td class="text-right total"><span>Итого:</span><span class="price">228 Р</span></td>
                       </tr>
                     </tbody>
@@ -738,7 +716,6 @@
                 <li><a href="#">Центр поддержки Lamoda</a></li>
                 <li><a href="#">Как оформить заказ</a></li>
                 <li><a href="#">Как выбрать размер                        </a></li>
-                <li><span>Вы можете оплатить покупку наличными при получении, либо выбрать другой способ оплаты.</span></li>
               </ul>
             </div>
             <div class="col-md-3">
@@ -760,6 +737,8 @@
             <div class="col-md-3">
               <div><strong>Акции дня</strong></div>
               <div class="owl-carousel owl-theme" id="fbanner"><img class="owl-carousel__item" src="/img/content/slide-1.png"><img class="owl-carousel__item" src="/img/content/slide-2.png"><img class="owl-carousel__item" src="/img/content/slide-1.png"><img class="owl-carousel__item" src="/img/content/slide-2.png"></div>
+              <div class="mt-1"><strong>Товар дня</strong></div>
+              <div class="mt-1 center"><a href="#" title="Товар дня"><img class="subfooter__image" src="/img/content/slide-1.png"></a></div>
             </div>
           </div>
         </div>

@@ -1,5 +1,4 @@
 @import "topbar"
-@import "dropdown"
 @import "menu"
 @import "blocks"
 @import "mobile-menu"
@@ -41,7 +40,7 @@
         background-size: contain
         opacity: .6
         transition: opacity .25s
-        position: pointer
+        cursor: pointer
         &:hover
             opacity: 1
     &__content
@@ -114,7 +113,46 @@
         color: #B0B0B0
         &:not(:first-child)
             margin-left: 10px
-
+// Доставка
+.delivery
+    color: white
+    position: relative
+    user-select: none
+    a
+        color: #d362a2
+        text-decoration: underline
+    .front
+        position: absolute
+        top: 0
+        background: #333333
+        .inner
+            width: 0
+            margin-left: -40px
+            white-space: nowrap
+            display: flex
+            align-items: center
+            position: relative
+            .content
+                overflow: hidden
+            &::after
+                content: ""
+                background: url(/img/icons/delivery.png) #333333
+                width: 20px
+                height: 20px
+                margin-left: 8px
+                display: inline-block
+                background-size: contain
+                position: absolute
+                right: -30px
+    &--open
+        .back
+            opacity: 0
+            transition: opacity .5s 
+        .front
+            .inner
+                transition: width .5s linear .25s, margin-left .25s linear
+                width: 100%
+                margin-left: 0
 .price
     width: 10%
     text-align: center
@@ -145,6 +183,8 @@
         opacity: 1
 .prev-disabled
     opacity: .5
+    &:hover
+        opacity: .5
 .stock
     position: relative
     &-price-new
@@ -152,6 +192,7 @@
         width: 100%
         display: block
         text-align: center
+        white-space: nowrap
     &-price-old
         color: #B0B0B0
         text-decoration: line-through
@@ -174,6 +215,10 @@
         text-decoration: underline
 hr
     margin: 0 8px
+.cart-name
+    text-overflow: ellipsis
+    white-space: nowrap
+    max-width: 200px
 
 // *****
 // Поиск
