@@ -1,9 +1,5 @@
 <h1>Minishopogolik html template</h1>
 
-<p>
-	<img src="https://raw.githubusercontent.com/agragregra/optimizedhtml-start-template/master/app/img/preview.jpg" alt="Start HTML Template">
-</p>
-
 <p>Author: <a href="http://vk.com/unnamed_wanderer" target="_blank">Mrikaev Kostya</a>
 
 <h2>Gulp tasks:</h2>
