@@ -1,4 +1,4 @@
-<h1>Minishopogolik html template</h1>
+<h1>HTML website template "Minishopogolik"</h1>
 
 <p>Author: <a href="http://vk.com/unnamed_wanderer" target="_blank">Mrikaev Kostya</a>
 
